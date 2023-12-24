@@ -1,0 +1,29 @@
+version: '3.8'
+services: #все контейнеры писать в нутри
+    web-vetmanagertest:
+        build:
+            context: . # загрузка DockerFile
+        container_name: web-vetmanagertest #название контейнера
+        volumes: # мантирование каталогов
+            - ./:/var/www/html/
+        restart: always # всегда перезагружать если остановился
+        depends_on: # запускать этот контейнер после того как запуститься db
+            - db-vetmanagertest
+        extra_hosts:
+            - "vetmanagertest.test:127.0.0.1"
+        ports:
+            - "81:80"
+    db-vetmanagertest:
+        image: mysql
+        container_name: db-vetmanagertest
+        tty: true
+        volumes:
+            - ./mysql_data:/var/lib/mysql/
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: vetmanagertest
+            MYSQL_USER: vetmanagertest
+            MYSQL_PASSWORD: root
+        restart: always
+        ports:
+            - "3381:3306"
