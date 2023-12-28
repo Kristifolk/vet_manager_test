@@ -1,0 +1,18 @@
+{
+  "name": "kristifolk/task_12",
+  "type": "library",
+  "require": {
+    "monolog/monolog": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Task12\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Кристина",
+      "email": "devkristin.karr@gmail.com"
+    }
+  ]
+}
