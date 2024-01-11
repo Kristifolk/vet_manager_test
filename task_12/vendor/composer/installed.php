@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '5636ac242905c6515c2fe1faa9f3027054a4b686',
+        'reference' => 'd86521042d4adfc83eab2f7fb84c3f8eb3658097',
         'name' => 'kristifolk/task_12',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '5636ac242905c6515c2fe1faa9f3027054a4b686',
+            'reference' => 'd86521042d4adfc83eab2f7fb84c3f8eb3658097',
             'dev_requirement' => false,
         ),
         'monolog/monolog' => array(

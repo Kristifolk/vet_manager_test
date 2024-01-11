@@ -11,11 +11,21 @@ index.php
 3. Инициализировать проект composer, сгенерировать автолоадер который через require подключить в файле index.php и создать объект класса Test
 4. Подключить библиотеку monolog/monolog и при помощи неё логировать каждый вызов метода в файл /tmp/mylog.log*/
 
-require_once __DIR__ . '/vendor/autoload.php';//подключить автозагрузчик
+require_once __DIR__ . '/vendor/autoload.php';
 
-use monolog/monolog;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
+use Src\Test;
 
+
+//импортировать классы Logger и StreamHandler из пространства имен Monolog
+
+// Создание экземпляра логгера Monolog
+$log = new Logger('mylog');
+$log->pushHandler(new StreamHandler('/tmp/mylog.log', Logger::INFO));//для записи логов в файл, почему зачеркнуто
 
 
 $test = new Test();
 $test->doSomething();
+
+$log->info('doSomething() method called');//каждый вызов метода doSomething() будет логироваться в файл /tmp/mylog.log

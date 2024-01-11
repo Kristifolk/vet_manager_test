@@ -6,12 +6,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Task12\\": "src/"
+      "Src\\": "src/"
     }
   },
   "authors": [
     {
-      "name": "Кристина",
+      "name": "Kristina",
       "email": "devkristin.karr@gmail.com"
     }
   ]
