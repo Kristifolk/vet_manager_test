@@ -106,9 +106,9 @@ class Calculator
         return $this;
     }
 
-    public function operation($operation, $a, $b)
+    public function operation($operation)
     {
-        $this->operation = new $operation($a, $b);
+        $this->operation = new $operation($this->firstNumber, $this->secondNumber);
         return $this;
     }
 
@@ -127,7 +127,7 @@ $calculator = new Calculator();
 assert(
     $calculator->firstNumber(2)
         ->secondNumber(2)
-        ->operation(Mult::class, 2, 2)
+        ->operation(Mult::class)
         ->result() == 4
 );
 
@@ -136,15 +136,15 @@ $calculator = new Calculator();
 assert(
     $calculator->firstNumber(2)
         ->secondNumber(2)
-        ->operation(Div::class, 8, 2)
-        ->result() == 4
+        ->operation(Div::class)
+        ->result() == 1
 );
 
 $calculator = new Calculator();
 try {//код, который может вызвать исключение
     $result = $calculator->firstNumber(2)
         ->secondNumber(0)
-        ->operation(Div::class, 2, 0)
+        ->operation(Div::class)
         ->result();
 
     echo "Результат: " . $result;
