@@ -15,10 +15,12 @@ assertException(
 
 class MyException extends Exception
 {
-    function mythrow()
-    {
-        throw new MyException("Exception mythrow");
-    }
+
+}
+
+function mythrow()
+{
+    throw new MyException("Exception mythrow");
 }
 
 try {
@@ -38,6 +40,7 @@ function customthrow(int $i)
 // Написать свою реализацию функции  assertException(стандартными средствами языка php), которая будет проверять что вызывается нужное исключение
 function assertException()
 {
+
 }
 
 assertException(
