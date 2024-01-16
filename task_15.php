@@ -1,8 +1,6 @@
 /*
-https://onlinephp.io/c/8d16b
+https://onlinephp.io/c/91bcc
 */
-
-
 
 <?php
 /* 15. puzzle 1. Задание 2
@@ -17,7 +15,8 @@ https://onlinephp.io/c/8d16b
 // Она принимает три аргумента: исходную строку  $word , начальную позицию  $length  и длину подстроки
 // (в данном случае 1 символ). Таким образом,  mb_substr($word, $length, 1)  извлекает один символ из
 // строки  $word  на позиции  $length
-function is_palindrome(string $word) {
+function is_palindrome(string $word)
+{
     $word = mb_strtolower($word);//приводит к нижнему регистру
     $length = mb_strlen($word);//длина строки, шалаш = 5
     //print_r($length);
@@ -28,24 +27,24 @@ function is_palindrome(string $word) {
     }
     //print_r($palindrome);
 
-    if ($word === $palindrome){
+    if ($word === $palindrome) {
         return true;
-    } else
+    } else {
         return false;
+    }
 }
+
 $test_word = "Madam";
 //$test_word  = "wow";
 $result = is_palindrome($test_word);
 echo $result ? "true" : "false";
 
-assert(is_palindrome("wow"));//wow является полиндромом
-assert(!is_palindrome("woww"));//woww не является полиндромом
-assert(is_palindrome("шалаш"));// шалаш является полиндромом
-assert(is_palindrome("Шалаш"));// Шалаш является полиндромом несмотря на регистр
-assert(is_palindrome("шaлaш"));// шaлaш является полиндромом несмотря на то, что буквы a англ.яз
-assert(!is_palindrome("шалaш"));// шалaш не является полиндромом,тк  последяя буква a является англ.яз
-assert(!is_palindrome("шалашш"));//шалашш не является полиндромом
-assert(!is_palindrome("такси"));//шалашш не является полиндромом
-assert(is_palindrome("топот"));// шалаш является полиндромом
-assert(is_palindrome("Madam"));//  Madam является полиндромом несмотря на регистр
-
+assert(is_palindrome("wow"), "Ожидается,что аргумент функции полиндромом. Слово 'wow' является полиндромом");
+assert(!is_palindrome("woww"), "Ожидается,что аргумент функции полиндромом. Слово 'woww' не является полиндромом");
+assert(is_palindrome("шалаш"), "Ожидается,что аргумент функции полиндромом. Слово 'шалаш' является полиндромом");
+assert(is_palindrome("Шалаш"), "Ожидается,что аргумент функции полиндромом. Слово 'Шалаш' является полиндромом, вне завсимости от регистра");
+assert(is_palindrome("шaлaш"), "Ожидается,что аргумент функции полиндромом. Слово 'шaлaш' является полиндромом, не смотря на то что буквы 'a' являются латиницей, а остальные кириллица");
+assert(!is_palindrome("шалaш"), "Ожидается,что аргумент функции полиндромом. Слово 'шалaш' не является полиндромом, тк первая буква 'а' это кириллица, последяя буква 'a' является латиницей");
+assert(!is_palindrome("такси"), "Ожидается,что аргумент функции полиндромом. Слово 'такси' не является полиндромом");
+assert(is_palindrome("топот"), "Ожидается,что аргумент функции полиндромом. Слово 'топот' является полиндромом");
+assert(is_palindrome("Madam"), "Ожидается,что аргумент функции полиндромом. Слово 'Madam' является полиндромом, вне завсимости от регистра");
