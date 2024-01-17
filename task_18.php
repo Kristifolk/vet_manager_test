@@ -1,5 +1,5 @@
 /*
-https://onlinephp.io/c/7ab6a
+https://onlinephp.io/c/74bfd
 */
 <?php
 // ### Исключения  (6 часов)
@@ -18,7 +18,6 @@ assertException(
 
 class MyException extends Exception
 {
-
 }
 
 function mythrow()
@@ -50,9 +49,9 @@ function assertException(string $exceptionClass, callable $callback)
     } catch (\Exception $e) {
         // get_class для получения имени класса объекта. Она принимает объект в качестве аргумента и возвращает строку с именем класса этого объекта
         if (get_class($e) === $exceptionClass) {//для получения имени класса объекта исключения, которое было поймано и сравниваю с тем,которое ожидалось  в аргументах функции assertException
-            echo "exception: " . $e->getMessage(), "\n";
+            echo "exception: " . $e->getMessage(), "\n";//нужное исключение
         } else {
-            throw $e;
+            echo "Unexpected Exception received- " . get_class($e);//неожиданное Исключение
         }
     }
 }
