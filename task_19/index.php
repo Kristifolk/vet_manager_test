@@ -8,17 +8,18 @@
 Circle (круг), Triangle (треугольник) со своими методами вычисления площади и периметра.
 Создать массив n фигур и вывести полную информацию о фигурах на экран.
 */
+require_once __DIR__ . '/vendor/autoload.php';//подключить автозагрузчик
 
-use \My\Concrete\Rectangle;
-use \My\Concrete\Triangle;
-use \My\Concrete\Circle;
+use My\Concrete\Rectangle as Rectangle;
+use My\Concrete\Triangle as Triangle;
+use My\Concrete\Circle as Circle;
+
 
 $rectangle = new Rectangle(5, 10);
 $rectangle->DisplayInformation();
 
 $triangle = new Triangle(4, 7, 10, 5);
 $triangle->DisplayInformation();
-
 
 $circle = new Circle(8);
 $circle->DisplayInformation();
