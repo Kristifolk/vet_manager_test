@@ -16,10 +16,10 @@ use My\Concrete\Circle as Circle;
 
 
 $rectangle = new Rectangle(5, 10);
-$rectangle->DisplayInformation();
+$rectangle->displayInformation();
 
 $triangle = new Triangle(4, 7, 10, 5);
-$triangle->DisplayInformation();
+$triangle->displayInformation();
 
 $circle = new Circle(8);
-$circle->DisplayInformation();
+$circle->displayInformation();

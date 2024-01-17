@@ -13,12 +13,12 @@ class Circle extends Figure
         $this->radius = $radius;
     }
 
-    public function CalculateArea(): float
+    public function calculateArea(): float
     {
         return pi() * pow($this->radius, 2);//пr2
     }
 
-    public function CalculatePerimeter(): float
+    public function calculatePerimeter(): float
     {
         return 2 * pi() * $this->radius;
     }

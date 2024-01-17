@@ -19,12 +19,12 @@ class Triangle extends Figure
         $this->c = $c;
     }
 
-    public function CalculateArea(): float
+    public function calculateArea(): float
     {
         return (this->heightA * this->a) / 2;
     }
 
-    public function CalculatePerimeter(): float
+    public function calculatePerimeter(): float
     {
         return $this->a * $this->b * $this->c;
     }

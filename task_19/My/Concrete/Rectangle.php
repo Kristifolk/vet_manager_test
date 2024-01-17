@@ -15,12 +15,12 @@ class Rectangle extends Figure
         $this->height = $height;
     }
 
-    public function CalculateArea(): float
+    public function calculateArea(): float
     {
         return $this->width * $this->height;
     }
 
-    public function CalculatePerimeter(): float
+    public function calculatePerimeter(): float
     {
         return 2 * ($this->width + $this->height);
     }
