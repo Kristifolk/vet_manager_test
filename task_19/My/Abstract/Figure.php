@@ -13,6 +13,6 @@ abstract class Figure
     {
         echo "Type: " . static::class . "\n"; //static::class для получения полного имени класса, в котором оно было вызвано
         echo "Area: " . $this->calculateArea() . "\n";
-        echo "Perimeter: " . $this->alculatePerimeter() . "\n";
+        echo "Perimeter: " . $this->calculatePerimeter() . "\n";
     }
 }

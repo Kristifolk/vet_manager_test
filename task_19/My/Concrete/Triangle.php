@@ -1,5 +1,4 @@
 <?php
-
 namespace My\Concrete;
 
 use My\Abstract\Figure;
@@ -21,7 +20,7 @@ class Triangle extends Figure
 
     public function calculateArea(): float
     {
-        return (this->heightA * this->a) / 2;
+        return ($this->heightA * $this->a) / 2;
     }
 
     public function calculatePerimeter(): float

@@ -1,5 +1,4 @@
 <?php
-
 namespace My\Concrete;
 
 use My\Abstract\Figure;
