@@ -1,4 +1,10 @@
 <?php
+// ### Работа с стандартной библиотекой(SPL)
+/* 24. Задание 1
+При помощи класса RecursiveDirectoryIterator выведите список только файлов, которые находятся в вашей домашней директории включая все поддиректории
+Задание 2
+Зачем нужен класс исключений InvalidArgumentException и какие еще классы исключений из SPL вы знаете?
+*/
 //print_r(__DIR__);
 $directory = new RecursiveDirectoryIterator(__DIR__);//Fatal error: Uncaught UnexpectedValueException: RecursiveDirectoryIterator::__construct(): open_basedir restriction in effect
 $iterator = new RecursiveIteratorIterator($directory);
