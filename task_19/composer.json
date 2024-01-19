@@ -1,8 +1,8 @@
 {
   "autoload": {
     "psr-4": {
-      "My\\Abstract\\": "src/My/Abstract",
-      "My\\Concrete\\": "src/My/Concrete"
+      "": "src/",
+      "": "src/"
     }
   }
 }
