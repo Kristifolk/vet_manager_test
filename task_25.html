@@ -1,0 +1,64 @@
+<! -- ### Javascript  (1 час)
+25.
+Дан объект
+var data = {
+hello1: 'value2',
+hello2: 'value3',
+hello3: 'value4',
+hello4: 'value5',
+hello5: 'value1',
+hello6: 'value2',
+hello7: 'value3'
+};
+
+var data1 = {};
+var data2 = {};
+
+// Решение пишем вместо этого комментария.
+
+console.log(data1, data2);
+
+сделать из объекта data два других объекта(data1, data2), в одном данные в которых ключ с четным числом(hello2, hello4, ...), в другом данные которые значение с четным числом(value2, value4, ...)
+В консоль нужно выводить:
+data1 = {
+"hello2": "value3",
+...
+}
+
+data2 = {
+"hello1": "value2",
+...
+}
+-->
+
+<script>
+    var data = {
+        hello1: 'value2',
+        hello2: 'value3',
+        hello3: 'value4',
+        hello4: 'value5',
+        hello5: 'value1',
+        hello6: 'value2',
+        hello7: 'value3'
+    };
+
+    var data1 = {};
+    var data2 = {};
+
+
+    for (var key in data) {
+        var value = data[key];
+        //console.log(key, value);
+        var keyLastDigit = parseInt(key.slice(-1)); // Получаем последнюю цифру ключа Метод parseInt() для преобразования строки в целое число Метод slice() для извлечения части строки
+        var valueLastDigit = value.slice(-1);
+
+        if (keyLastDigit % 2 === 0) {
+            data1[key] = value;
+        }
+        if (valueLastDigit % 2 === 0) {
+            data2[key] = value;
+        }
+    }
+    console.log(data1, data2);
+
+</script>
