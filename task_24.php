@@ -1,5 +1,6 @@
 <?php
-$directory = new RecursiveDirectoryIterator('/work/docker/vet_manager_test');//Fatal error: Uncaught UnexpectedValueException: RecursiveDirectoryIterator::__construct(): open_basedir restriction in effect
+//print_r(__DIR__);
+$directory = new RecursiveDirectoryIterator(__DIR__);//Fatal error: Uncaught UnexpectedValueException: RecursiveDirectoryIterator::__construct(): open_basedir restriction in effect
 $iterator = new RecursiveIteratorIterator($directory);
 
 foreach ($iterator as $file) {
