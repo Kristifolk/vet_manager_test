@@ -24,7 +24,7 @@ class A
 
     public function __toString()
     {
-        return $b;
+        return $a;
     }
 }
 
