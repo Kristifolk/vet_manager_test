@@ -41,17 +41,22 @@ JOIN invoice ON client.id = invoice.client_id
 GROUP BY FIO;
 
 -- 7) Сделать дамп базы через CLI
---зайти в контейнер из него в командную строку
+--зайти в контейнер 'intern-mysql' из него в командную строку
 docker exec -it intern-mysql /bin/bash
---Сделать дамп БД 'intern' в файл 'sql'
-mysqldump -uroot -p123456 intern > sql   
+--Сделать дамп БД 'intern' в файл '222.sql'
+mysqldump -uroot -p123456 intern > 222.sql
+--Дамп '222.sql' сохраняется в контейнере, а не на компе. Надо вытащить из контейнера файлы и сохранить на комп
+ docker cp intern-mysql:/ /home/kristin/work/docker/vet_manager_test/task_26/mysql-with-questions/dump
 
 -- 8) Удалить базу и импортировать из дампа через CLI
 --Удалить БД 'intern'
 mysql -u root -p123456 -e "drop database intern;"
 --создать БД 'intern' 
-mysq -u root -p123456 -e "create database intern;"
---Импортирование БД 'intern' из дампа 'sql'
-mysqldump -uroot -p123456 intern < sql
+mysql -u root -p123456 -e "create database intern;"
+--Импортирование БД 'intern' из дампа '222.sql'
+mysql -uroot -p123456 intern < 222.sql
+
+
+
 
 
