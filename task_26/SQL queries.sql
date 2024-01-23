@@ -40,6 +40,7 @@ FROM client
 JOIN invoice ON client.id = invoice.client_id
 GROUP BY FIO;
 
+--Вариант 1--
 -- 7) Сделать дамп базы через CLI
 --зайти в контейнер 'intern-mysql' из него в командную строку
 docker exec -it intern-mysql /bin/bash
@@ -55,6 +56,22 @@ mysql -u root -p123456 -e "drop database intern;"
 mysql -u root -p123456 -e "create database intern;"
 --Импортирование БД 'intern' из дампа '222.sql'
 mysql -uroot -p123456 intern < 222.sql
+
+--Вариант 2 (после указания порта 33061)--
+-- 7) Сделать дамп базы через CLI
+-- 8) Удалить базу и импортировать из дампа через CLI
+--заходим в mysql  
+--mysql -h 172.17.0.1 -P 33061 --protocol=tcp -u root -p
+mysql -hlocalhost -P33061 --protocol=tcp -uroot -p123456 
+--дамп с терминала: вызывать из директории куда будет скачиваться дамп БД
+ mysqldump -hlocalhost -P33061 --protocol=tcp -uroot -p123456 intern > new.sql
+--импорт БД из дампа: 
+mysql -hlocalhost -P33061 --protocol=tcp -uroot -p123456 intern < new.sql
+
+
+
+
+
 
 
 
