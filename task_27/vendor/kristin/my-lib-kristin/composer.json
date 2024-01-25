@@ -1,0 +1,21 @@
+{
+  "name": "kristin/my-lib-kristin",
+  "description": "Test creation of the Library",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Kristin",
+      "email": "devkristin.karr@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.1"
+  }
+}

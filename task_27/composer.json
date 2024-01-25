@@ -1,0 +1,21 @@
+{
+    "name": "kristin/task_27",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kristin",
+            "email": "devkristin.karr@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.1",
+        "kristin/my-lib-kristin": "@dev"
+    }
+}

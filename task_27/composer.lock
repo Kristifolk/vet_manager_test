@@ -1,0 +1,64 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "4e0069c3cd3f59edc276d3e28d6ab308",
+    "packages": [
+        {
+            "name": "kristin/my-lib-kristin",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kristifolk/MyLibKristinPackagist.git",
+                "reference": "ad649ba72e7ca56b34dbc4692c5d566d6f2ea05e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kristifolk/MyLibKristinPackagist/zipball/ad649ba72e7ca56b34dbc4692c5d566d6f2ea05e",
+                "reference": "ad649ba72e7ca56b34dbc4692c5d566d6f2ea05e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kristin",
+                    "email": "devkristin.karr@gmail.com"
+                }
+            ],
+            "description": "Test creation of the Library",
+            "support": {
+                "issues": "https://github.com/Kristifolk/MyLibKristinPackagist/issues",
+                "source": "https://github.com/Kristifolk/MyLibKristinPackagist/tree/main"
+            },
+            "time": "2024-01-25T12:22:02+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "kristin/my-lib-kristin": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^8.1"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}
