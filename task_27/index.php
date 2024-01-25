@@ -6,5 +6,5 @@ use MyLib\ExchangedAmount;
 
 
 $amount = new ExchangedAmount("USD", "UAH", 100);
-// Вернет около 2727,12
+// Вернет на текущую дату. На 25.01.2024 вернет 3745.44
 var_dump($amount->toDecimal());
