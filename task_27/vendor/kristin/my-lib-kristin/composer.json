@@ -5,7 +5,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "": "src/"
+      "MyLib\\": "src/"
     }
   },
   "authors": [
@@ -16,6 +16,8 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": "^8.1"
+    "php": "^8.1",
+    "ext-simplexml": "*",
+    "ext-libxml": "*"
   }
 }

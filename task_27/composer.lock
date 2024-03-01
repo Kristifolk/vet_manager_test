@@ -12,22 +12,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kristifolk/MyLibKristinPackagist.git",
-                "reference": "ad649ba72e7ca56b34dbc4692c5d566d6f2ea05e"
+                "reference": "54050408ee54a5348e9c892cb0862cb5e93727ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kristifolk/MyLibKristinPackagist/zipball/ad649ba72e7ca56b34dbc4692c5d566d6f2ea05e",
-                "reference": "ad649ba72e7ca56b34dbc4692c5d566d6f2ea05e",
+                "url": "https://api.github.com/repos/Kristifolk/MyLibKristinPackagist/zipball/54050408ee54a5348e9c892cb0862cb5e93727ac",
+                "reference": "54050408ee54a5348e9c892cb0862cb5e93727ac",
                 "shasum": ""
             },
             "require": {
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
                 "php": "^8.1"
             },
             "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "": "src/"
+                    "MyLib\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -45,7 +47,7 @@
                 "issues": "https://github.com/Kristifolk/MyLibKristinPackagist/issues",
                 "source": "https://github.com/Kristifolk/MyLibKristinPackagist/tree/main"
             },
-            "time": "2024-01-25T12:22:02+00:00"
+            "time": "2024-01-26T13:12:51+00:00"
         }
     ],
     "packages-dev": [],

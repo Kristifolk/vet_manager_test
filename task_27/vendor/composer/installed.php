@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c3c216d3d017837e5fcd8a65f8d9c97d71d80832',
+        'reference' => 'a7432db6413b73ce592cf6a4d6e8e9fc47cdf647',
         'name' => 'kristin/task_27',
         'dev' => true,
     ),
@@ -18,7 +18,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => 'ad649ba72e7ca56b34dbc4692c5d566d6f2ea05e',
+            'reference' => '54050408ee54a5348e9c892cb0862cb5e93727ac',
             'dev_requirement' => false,
         ),
         'kristin/task_27' => array(
@@ -27,7 +27,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c3c216d3d017837e5fcd8a65f8d9c97d71d80832',
+            'reference' => 'a7432db6413b73ce592cf6a4d6e8e9fc47cdf647',
             'dev_requirement' => false,
         ),
     ),
